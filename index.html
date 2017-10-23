@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Write down what is important to you and determine how long to finish it">
+        <meta name="keywords" content="task,board,notes,paper,write">
+        <meta name="author" content="Aviv Haruzi">
+        <title>My Task Board</title>
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" >
+        <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/jquery.timepicker.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <link rel="icon" type="image/x-icon" href="images/icons/favicon.ico">
+        <link rel="icon" type="image/png" href="images/icons/icon.png">
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>My Task Board</h1> 
+            </header>
+            <div class="form-main">
+                <form onsubmit="return validateForm()" id="formNote" autocomplete="off">
+                    <textarea placeholder="Start Typing..." id="text" autofocus required></textarea>
+                    <div class="input-group">
+                        <span id="warningDate"><i class="fa fa-warning" aria-hidden="true"></i> Invalid Date</span>
+                        <input type="text" id="day" placeholder="DD" minlength="1" maxlength="2" required>
+                        <input type="text" id="month" placeholder="MM" minlength="1" maxlength="2" required>
+                        <input type="text" id="year" placeholder="YYYY" minlength="4" maxlength="4" required>
+                        <span id="warningTime"><i class="fa fa-warning" aria-hidden="true"></i> Invalid Time</span>
+                        <input type="text" id="hour" placeholder="Time" required>
+                        <input type="reset" value="Reset">
+                        <input type="submit" value="Create">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row" id="posts">
+            </div>
+        </div>
+        <!-- jQuery first, then Tether, then Bootstrap JS -->
+        <script src="js/jquery/jquery-3.2.1.min.js"></script>
+        <script src="js/jquery/jquery.timepicker.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"></script>
+        <script src="js/bootstrap/bootstrap.min.js"></script>
+        <script src="js/custom/myscript.js"></script>
+    </body>
+</html>

@@ -1,0 +1,347 @@
+body {
+    background: url('../images/main-bg.jpg') center center repeat;
+    font-family: 'Raleway', sans-serif;
+}
+
+header > h1 {
+    width: 640px;
+    margin: 20px auto;
+    background: #fff;
+    text-align: center;
+    font-weight: 300;
+    padding: 20px 0;
+    border-radius: 7px;
+    box-shadow: 5px 5px 7px #333;
+}
+
+.form-main {
+    width: 640px;
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+textarea {
+    margin: 0 auto;
+    width: 640px;
+    height: 230px;
+    background: url('../images/paper.png') repeat;
+    resize: none;
+    padding: 38px 100px;
+    border: none;
+    box-shadow: 0px 5px 0px #333;
+}
+
+textarea:focus {
+    border: none;
+    outline: none;
+}
+
+textarea::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #F5F5F5;
+}
+
+textarea::-webkit-scrollbar {
+	width: 10px;
+	background-color: #F5F5F5;
+}
+
+textarea::-webkit-scrollbar-thumb {
+	background-color: #666666;	
+}
+
+.input-group {
+    width: 100%;
+}
+
+input {
+    height: 36px;
+    outline: none;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.input-group > input[type=text] {
+    box-sizing: border-box;
+    padding: 5px 10px;
+    box-shadow: 0 5px 0 #666666;
+    width: 10%;
+}
+
+.input-group > input[type=text]:not(:nth-child(2)) {
+    border-left: 1px solid #666666;
+}
+
+#hour {
+    width: 20%;
+    box-shadow: 0 5px 0 #666666;
+    box-sizing: border-box;
+    padding: 5px 10px;
+}
+
+input[type=reset] {
+    padding: 5px 0;
+    width: 25%;
+    background: #f1c40f;
+    color: #fff;
+    box-shadow: 0 5px 0 #C6A10D;
+}
+
+input[type=submit] {
+    padding: 5px 0;
+    width: 25%;
+    background: #2ecc71;
+    color: #fff;
+    box-shadow: 0 5px 0 #27ae60;
+}
+
+input[type=reset]:hover {
+    background: #C6A10D;
+} 
+
+input[type=submit]:hover {
+    background: #27ae60;
+}
+
+#warningDate, #warningTime {
+    display: none;
+    position: absolute;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    width: 150px;
+    text-align: center;
+    border-radius: 5px;
+    z-index: 999;
+}
+
+#warningDate > i, #warningTime > i {
+    margin-right: 5px;
+}
+
+#warningDate {
+    left: -155px;
+}
+
+#warningTime {
+    top: 46px;
+    right: 50%;
+}
+
+#warningDate::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent #333;
+}
+
+#warningTime::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #333;;
+}
+
+.note-main {
+    position: relative;
+    margin: 20px;
+    width: 435px;
+    height: 435px;
+    background: url('../images/sticky-note.png') repeat;
+    opacity: 1;
+    transform: scale(1);
+    transition: all 0.4s;
+}
+
+.note-inside {
+    width: 340px;
+    height: 260px;
+    margin: 0;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: auto;
+}
+
+.note-inside::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+.note-inside::-webkit-scrollbar {
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+.note-inside::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #e74c3c;;
+}
+
+.note-inside > p {
+    text-align: justify;
+    box-sizing: border-box;
+    padding: 10px 20px;
+    font-size: 1.7rem;
+    font-style: italic;
+}
+
+.note-main > footer {
+    position: absolute;
+    font-weight: 600;
+    bottom: 20px;
+    left: 40px;
+    font-size: 2rem;
+    color: #007AFF;
+}
+
+.note-main > span {
+    display: none;
+}
+
+.note-main:hover > span:hover {
+    color: #fff;
+    background: #e74c3c;
+}
+
+.note-main:hover span {
+    display: block;
+    position: absolute;
+    left: 20px;
+    font-size: 3rem;
+    color: #e74c3c;
+    cursor: pointer;
+    background: #fff;
+    padding: 20px;
+    border-radius: 100%;
+    transition: all 0.4s ease;
+}
+
+.fade-in {
+    animation: fade-in 0.4s 1 ease;
+}
+
+@keyframes fade-in {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .note-main {
+        margin: 20px auto;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    header > h1 {
+        width: 100%;
+        font-size: 2.5rem;
+    }
+
+    textarea {
+        padding: 38px 20px 38px 100px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .form-main {
+        width: 100%;
+    }
+
+    .input-group > input[type=text] {
+        box-sizing: border-box;
+        padding: 5px 10px;
+        border-bottom: 3px solid #666666;
+    }
+
+    #warningDate {
+        left: 0;
+        bottom: -50px;
+        width: 100%;
+    }
+
+    #warningTime {
+        top: 107%;
+        right: 0;
+        width: 100%;
+    }
+
+    #warningDate::after, #warningTime::after {
+        top: 0;
+        left: 0;
+        margin-top: 0;
+        border-width: 0;
+    }
+
+    #day, #month {
+        width: 25%;
+    }
+
+    #year {
+        width: 50%;
+    }
+
+    #hour {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 5px 20px;
+        border-left: 0;        
+    }
+
+    input[type=reset] {
+        width: 100%;
+    }
+
+    input[type=submit] {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .note-main {
+        width: 235px;
+        height: 235px;
+        background: url('../images/sticky-note-mobile.png') repeat;
+    }
+    
+    .note-inside {
+        width: 200px;
+        height: 150px;
+    }
+
+    .note-inside > p {
+        font-size: 1.5rem;
+    }
+    
+    .note-main > footer {
+        bottom: 10px;
+        left: 20px;
+        font-size: 1.5rem;
+    }
+    
+    .note-main:hover span {
+        left: 10px;
+        font-size: 2rem;
+        padding: 10px;
+    }
+}
